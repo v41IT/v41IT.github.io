@@ -111,7 +111,7 @@
                     <div>
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Project Overview</h3>
                         <p class="text-gray-600 dark:text-gray-400">
-                            Implemented an automated malware detection and elimination system by integrating Wazuh SIEM with VirusTotal threat intelligence. The solution enables real-time file integrity monitoring on Linux endpoints, automatic scanning of suspicious files through VirusTotal, and an automation for immediate removal of confirmed threats.
+                            Implemented an automated malware detection and elimination system by integrating Wazuh SIEM with VirusTotal threat intelligence. The solution enables live file integrity monitoring on Linux endpoints, automatic scanning of suspicious files through VirusTotal, and an automation for immediate removal of confirmed threats.
                         </p>
                     </div>
                     
@@ -128,7 +128,7 @@
                     <div>
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Technical Architecture</h3>
                         <ol class="list-decimal pl-5 space-y-3 text-gray-600 dark:text-gray-400">
-                            <li><strong>FIM Configuration:</strong> Real-time monitoring of sensitive directories (/etc/, /usr/bin/, /usr/sbin/, /tmp/) with recursive scanning and scheduled checks every 360 seconds.</li>
+                            <li><strong>FIM Configuration:</strong> Live monitoring of sensitive directories (/etc/, /usr/bin/, /usr/sbin/, /tmp/) with recursive scanning and scheduled checks every 360 seconds.</li>
                             <li><strong>VirusTotal Integration:</strong> FIM detects file changes → Wazuh hashes file (MD5/SHA1/SHA256) → Query VirusTotal API → Alert generated if vendor detection count exceeds threshold.</li>
                             <li><strong>Active Response Script:</strong> Custom bash script receives file path from Wazuh, logs action to audit trail, removes file securely with safety checks to prevent deletion of critical system files.</li>
                             <li><strong>Validation Testing:</strong> Used EICAR test file to verify end-to-end detection-to-remediation automation without manual intervention.</li>
