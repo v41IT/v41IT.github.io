@@ -154,16 +154,6 @@
                         </ul>
                     </div>
                     
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Future Enhancements</h3>
-                        <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
-                            <li>Email/SMS alerting on remediation events for improved SOC visibility</li>
-                            <li>Quarantine instead of delete to preserve forensic evidence</li>
-                            <li>Integration with SOAR platforms for cross-vendor orchestration</li>
-                            <li>Machine learning enrichment to reduce false positive rates over time</li>
-                        </ul>
-                    </div>
-                    
                     <div class="mt-4">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Documentation & References</h3>
                         <div class="flex flex-wrap gap-3 text-sm">
@@ -178,12 +168,37 @@
             </div>
         </div>
 
+        <!-- Screenshot Gallery -->
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-6">
             <h2 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Dashboard Screenshots</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <img src="static/screenshots/wzuvmth.png" alt="Wazuh Threat Hunting Dashboard" class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm w-full cursor-pointer" onclick="openLightbox(this.src)">
-                <img src="static/screenshots/wzuvmth1.png" alt="Wazuh Threat Hunting Events stats and logs" class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm w-full cursor-pointer" onclick="openLightbox(this.src)">
-                <img src="static/screenshots/vtevents.png" alt="VirusTotal Detection details" class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm w-full cursor-pointer" onclick="openLightbox(this.src)">
+                <div>
+                    <img src="static/screenshots/wzuvmth.png" 
+                        alt="Wazuh Threat Hunting Dashboard" 
+                        class="rounded-lg border border-gray-200    dark:border-gray-700 shadow-sm w-full cursor-pointer" 
+                        onclick="openLightbox(this.src)">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                        Wazuh Threat Hunting Dashboard
+                    </p>
+                </div>
+                <div>
+                    <img src="static/screenshots/wzuvmth1.png" 
+                        alt="Wazuh Threat Hunting Events stats and logs" 
+                        class="rounded-lg border border-gray-200    dark:border-gray-700 shadow-sm w-full cursor-pointer" 
+                        onclick="openLightbox(this.src)">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                        Wazuh Threat Hunting Events stats and logs
+                    </p>
+                </div>
+                <div>
+                    <img src="static/screenshots/vtevents.png"
+                        alt="VirusTotal Detection details" 
+                        class="rounded-lg border border-gray-200    dark:border-gray-700 shadow-sm w-full cursor-pointer" 
+                        onclick="openLightbox(this.src)">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                        VirusTotal Detection details
+                    </p>
+                </div>
             </div>
             <p class="text-xs text-gray-400 dark:text-gray-500 mt-3">Click an image to enlarge. Data shown is from a lab environment.</p>
         </div>

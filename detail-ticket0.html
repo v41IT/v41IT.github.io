@@ -209,14 +209,24 @@
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-6">
             <h2 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Dashboard Screenshots</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <img src="static/screenshots/ssh-db.png" 
-                     alt="Failed logins over time" 
-                     class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm w-full cursor-pointer"
-                     onclick="openLightbox(this.src)">
-                <img src="static/screenshots/ssh-db1.png" 
-                     alt="Top source IPs" 
-                     class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm w-full cursor-pointer"
-                     onclick="openLightbox(this.src)">
+                <div>
+                    <img src="static/screenshots/ssh-db.png" 
+                    alt="Failed logins over time" 
+                    class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-smw-fullcursor-pointer"
+                    onclick="openLightbox(this.src)">
+                    <p class="text-xs text-gray-500dark:text-gray-400 mt-1">
+                    Failed logins over time
+                    </p>
+                </div>
+                <div>
+                    <img src="static/screenshots/ssh-db1.png" 
+                    alt="Top source IPs" 
+                    class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-smw-fullcursor-pointer"
+                    onclick="openLightbox(this.src)">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                        Top source IPs
+                    </p>
+                </div>
             </div>
             <p class="text-xs text-gray-400 dark:text-gray-500 mt-3">Click an image to enlarge. Data shown is from a lab environment.</p>
         </div>
