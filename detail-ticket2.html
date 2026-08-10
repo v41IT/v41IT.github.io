@@ -118,44 +118,42 @@
                     <div>
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Objectives</h3>
                         <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
-                            <li><strong class="font-semibold text-gray-900 dark:text-white">Establish File Integrity Monitoring:</strong> Monitor critical system directories including /etc/, /usr/bin/, /tmp/ for unauthorized changes.</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Establish FIM:</strong> Monitor critical system directories including /etc/, /usr/bin/, /tmp/ for unauthorized changes.</li>
                             <li><strong class="font-semibold text-gray-900 dark:text-white">Configure VirusTotal Integration:</strong> Connect Wazuh to VirusTotal API for cloud-based threat analysis on file hashes.</li>
-                            <li><strong class="font-semibold text-gray-900 dark:text-white">Deploy Active Response Script:</strong> Create automated malware removal script triggered when threat thresholds are exceeded.</li>
-                            <li><strong class="font-semibold text-gray-900 dark:text-white">Validate End-to-End Workflow:</strong> Test detection-to-remediation pipeline using EICAR test malware simulation.</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Deploy Active Response Script:</strong> Utilize the script provided in the Wazuh documentation for the malware removal script to trigger when threat is detected.</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Validate End-to-End Workflow:</strong> Test the script using the EICAR malware simulation file (Only use this on a disposable environment such as a VM).</li>
                         </ul>
                     </div>
                     
                     <div>
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Technical Architecture</h3>
                         <ol class="list-decimal pl-5 space-y-3 text-gray-600 dark:text-gray-400">
-                            <li><strong>FIM Configuration:</strong> Live monitoring of sensitive directories (/etc/, /usr/bin/, /usr/sbin/, /tmp/) with recursive scanning and scheduled checks every 360 seconds.</li>
-                            <li><strong>VirusTotal Integration:</strong> FIM detects file changes → Wazuh hashes file (MD5/SHA1/SHA256) → Query VirusTotal API → Alert generated if vendor detection count exceeds threshold.</li>
-                            <li><strong>Active Response Script:</strong> Custom bash script receives file path from Wazuh, logs action to audit trail, removes file securely with safety checks to prevent deletion of critical system files.</li>
+                            <li><strong>FIM Configuration:</strong> Live monitoring of sensitive directories (/etc/, /usr/bin/, /usr/sbin/, /tmp/) with recursive scanning and scheduled checks.</li>
+                            <li><strong>VirusTotal Integration:</strong> FIM detects file changes > Wazuh hashes file (MD5/SHA1/SHA256) > Query VirusTotal API > Alert generated if threat is detected and malicious files are eliminated.</li>
+                            <li><strong>Active Response Script:</strong> Custom bash script receives file path from Wazuh, logs action, and removes malicious file.</li>
                             <li><strong>Validation Testing:</strong> Used EICAR test file to verify end-to-end detection-to-remediation automation without manual intervention.</li>
                         </ol>
                     </div>
                     
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Key Learnings</h3>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Learnings Outcomes</h3>
                         <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
-                            <li><strong class="font-semibold text-gray-900 dark:text-white">SIEM Configuration:</strong> Hands-on experience with enterprise-grade security monitoring infrastructure (Wazuh v4.x).</li>
-                            <li><strong class="font-semibold text-gray-900 dark:text-white">API Integration:</strong> Working with REST APIs for threat intelligence feeds (VirusTotal developer API).</li>
-                            <li><strong class="font-semibold text-gray-900 dark:text-white">Automation:</strong> Building self-healing security controls through bash scripting and Active Response framework.</li>
-                            <li><strong class="font-semibold text-gray-900 dark:text-white">Incident Response:</strong> Understanding the full kill chain from detection through containment and eradication.</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">SIEM Configuration:</strong> Hands-on experience with security monitoring/threat hunting infrastructure (Wazuh v4.x).</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">API Integration:</strong> Working with REST APIs for threat intelligence (VirusTotal developer API).</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Automation:</strong> Built threat elimination controls via bash scripting and Active Response framework.</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Incident Response:</strong> Understanding the process of detection, containment, and eradication.</li>
                         </ul>
                     </div>
                     
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Challenges Overcome</h3>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Challenges</h3>
                         <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
-                            <li><strong class="font-semibold text-gray-900 dark:text-white">API Rate Limiting:</strong> Implemented caching and intelligent polling to stay within VirusTotal API quota.</li>
-                            <li><strong class="font-semibold text-gray-900 dark:text-white">False Positive Prevention:</strong> Added whitelist rules for trusted system updates and legitimate software installations.</li>
-                            <li><strong class="font-semibold text-gray-900 dark:text-white">Script Safety:</strong> Built path validation logic to prevent accidental deletion of critical OS files.</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Active Response Failures: Malware detection did not trigger malicious file removal.</strong> To solve this, I verified that the active response script exists in /var/ossec/active-response/bin/ on the agent. I also rebuilt the entire VM, too. haha!</li>
                         </ul>
                     </div>
                     
                     <div class="mt-4">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Documentation & References</h3>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">References</h3>
                         <div class="flex flex-wrap gap-3 text-sm">
                             <a href="https://documentation.wazuh.com/current/user-manual/capabilities/malware-detection/virus-total-integration.html" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 hover:underline">Wazuh VirusTotal Integration</a>
                             <span class="text-gray-400">|</span>

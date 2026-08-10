@@ -114,16 +114,6 @@
                     </tbody>
                 </table>
 
-                <h3>Troubleshooting</h3>
-                <table class="table table-bordered">
-                    <thead><tr><th>Issue</th><th>Resolution</th></tr></thead>
-                    <tbody>
-                        <tr><td>Agent installation failed</td><td>Uninstalled/reinstalled Windows VM entirely</td></tr>
-                        <tr><td>Connection refused</td><td>Verified IP alignment (<code>ipconfig</code> on Windows / <code>ifconfig</code> on Ubuntu)</td></tr>
-                        <tr><td>Agent not registering</td><td>Reset IP with <code>ipconfig /renew</code>, removed stale agent from dashboard, re-ran deployment script</td></tr>
-                    </tbody>
-                </table>
-
                 <h3>Key Features</h3>
                 <table class="table table-bordered">
                     <thead><tr><th>Feature</th><th>Details</th></tr></thead>
@@ -147,6 +137,15 @@
                     </tbody>
                 </table>
 
+                <h3>Challenges</h3>
+                <table class="table table-bordered">
+                    <thead><tr><th>Issue</th><th>Resolution</th></tr></thead>
+                    <tbody>
+                        <tr><td>Agent installation failed</td><td>Uninstalled/reinstalled Windows VM entirely</td></tr>
+                        <tr><td>Connection refused</td><td>Verified IP alignment (<code>ipconfig</code> on Windows / <code>ifconfig</code> on Ubuntu)</td></tr>
+                        <tr><td>Agent not registering</td><td>Reset IP with <code>ipconfig /renew</code>, removed stale agent from dashboard, re-ran deployment script</td></tr>
+                    </tbody>
+                </table>
                 <h3>References</h3>
                 <p><a href="https://documentation.wazuh.com/current/installation-guide/wazuh-dashboard/installation-assistant.html" target="_blank" rel="noopener">Wazuh Server Installation on Linux</a> | <a href="https://winstall.app/" target="_blank" rel="noopener">Winstall</a></p>
             </div>
