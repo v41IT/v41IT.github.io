@@ -105,6 +105,18 @@
         .dark .project-details a {
             color: #60a5fa;
         }
+
+        /* Make tables scrollable horizontally on mobile */
+        @media (max-width: 640px) {
+            table {
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            th, td {
+                white-space: nowrap;
+            }
+        }
     </style>
     <script>
         // Initialize dark mode on page load

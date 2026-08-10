@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEST — Val P.</title>
+    <title>Splunk Dashboard | Val P.</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = { darkMode: 'class' }
@@ -95,6 +95,18 @@
         }
         .dark .project-details a {
             color: #60a5fa;
+        }
+
+        /* Make tables scrollable horizontally on mobile */
+        @media (max-width: 640px) {
+            table {
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            th, td {
+                white-space: nowrap;
+            }
         }
     </style>
     <script>
