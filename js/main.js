@@ -1,5 +1,8 @@
-// Dark Mode Initiate
-if (localStorage.getItem('darkMode') === 'true' || (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+// Dark Mode Initiate - Respect system preference
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+// Check if user has saved preference, otherwise use system setting
+if (localStorage.getItem('darkMode') === 'true' || (!localStorage.getItem('darkMode') && prefersDark)) {
     document.documentElement.classList.add('dark');
 }
 
@@ -79,3 +82,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const isDark = document.documentElement.classList.contains('dark');
     updateIcons(isDark);
 });
+
+// Cleanup body overflow on resize/orientation change
+window.addEventListener('resize', () => {
+    document.body.style.overflow = '';
+});
+
+window.addEventListener('orientationchange', () => {
+    setTimeout(() => {
+        document.body.style.overflow = '';
+    }, 100);
+});
+
+// Force cleanup if page loaded with locked overflow
+if (document.body.style.overflow === 'hidden') {
+    document.body.style.overflow = '';
+}
