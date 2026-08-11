@@ -1,0 +1,122 @@
+/* Global Styles*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+body { font-family: 'Inter', sans-serif; }
+html { scroll-behavior: smooth; }
+* { transition-property: background-color, border-color, color; transition-duration: 200ms; }
+
+/* Modal Fade */
+.modal-overlay { animation: fadeIn 0.2s ease-out; }
+.modal-content { animation: slideUp 0.3s ease-out; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Project Detail Page Styling */
+.project-details h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+.dark .project-details h3 {
+    color: #f9fafb;
+}
+
+.project-details p {
+    margin-bottom: 1rem;
+    line-height: 1.75;
+}
+
+.project-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+.dark .project-details table {
+    border-color: #374151;
+}
+
+.project-details th {
+    background-color: #f3f4f6;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+.dark .project-details th {
+    background-color: #1f2937;
+}
+
+.project-details td {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #e5e7eb;
+    font-size: 0.875rem;
+}
+.dark .project-details td {
+    border-top-color: #374151;
+}
+
+.project-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.project-details li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-details li:before {
+    content: "•";
+    position: absolute;
+    left: 0.5rem;
+    color: #60a5fa;
+}
+
+.project-details strong {
+    font-weight: 600;
+}
+
+.project-details a {
+    color: #3b82f6;
+    text-decoration: underline;
+}
+.dark .project-details a {
+    color: #60a5fa;
+}
+
+/* Tables scroll horizontally on mobile */
+@media (max-width: 640px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    th, td {
+        white-space: nowrap;
+    }
+}
+
+/* Mobile Responsiveness - Ensure all containers fit screen width */
+@media (max-width: 640px) {
+    main {
+        max-width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    .max-w-5xl {
+        max-width: 100% !important;
+    }
+    
+    section {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}

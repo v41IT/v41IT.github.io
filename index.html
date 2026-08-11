@@ -8,122 +8,7 @@
     <script>
         tailwind.config = { darkMode: 'class' }
     </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-
-        html {
-        scroll-behavior: smooth;
-        }
-        
-        /* Smooth transitions */
-        * { transition-property: background-color, border-color, color; transition-duration: 200ms; }
-        
-        /* Modal animation */
-        .modal-overlay { animation: fadeIn 0.2s ease-out; }
-        .modal-content { animation: slideUp 0.3s ease-out; }
-        
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        
-        /* Detail page content styling */
-        .project-details h3 {
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: #1f2937;
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-        }
-        .dark .project-details h3 {
-            color: #f9fafb;
-        }
-
-        .project-details p {
-            margin-bottom: 1rem;
-            line-height: 1.75;
-        }
-
-        .project-details table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-            border-radius: 0.5rem;
-            overflow: hidden;
-            border: 1px solid #e5e7eb;
-        }
-        .dark .project-details table {
-            border-color: #374151;
-        }
-
-        .project-details th {
-            background-color: #f3f4f6;
-            padding: 0.75rem 1rem;
-            text-align: left;
-            font-weight: 600;
-            font-size: 0.875rem;
-        }
-        .dark .project-details th {
-            background-color: #1f2937;
-        }
-
-        .project-details td {
-            padding: 0.75rem 1rem;
-            border-top: 1px solid #e5e7eb;
-            font-size: 0.875rem;
-        }
-        .dark .project-details td {
-            border-top-color: #374151;
-        }
-
-        .project-details ul {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 1rem 0;
-        }
-
-        .project-details li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-details li:before {
-            content: "•";
-            position: absolute;
-            left: 0.5rem;
-            color: #60a5fa;
-        }
-
-        .project-details strong {
-            font-weight: 600;
-        }
-
-        .project-details a {
-            color: #3b82f6;
-            text-decoration: underline;
-        }
-        .dark .project-details a {
-            color: #60a5fa;
-        }
-
-        /* Make tables scrollable horizontally on mobile */
-        @media (max-width: 640px) {
-            table {
-                display: block;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-            th, td {
-                white-space: nowrap;
-            }
-        }
-    </style>
-    <script>
-        // Initialize dark mode on page load
-        if (localStorage.getItem('darkMode') === 'true' || (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        }
-    </script>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen flex flex-col">
 
@@ -137,8 +22,8 @@
                 </div>
                 
                 <div class="flex items-center gap-1">
-                    <a href="#about" class="px-4 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700">About</a>
-                    <a href="#projects" class="px-4 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700">Projects</a>
+                    <a href="index.html#about" class="px-4 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700">About</a>
+                    <a href="index.html#projects" class="px-4 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700">Projects</a>
                     
                     <button id="dark-mode-toggle" class="ml-1 p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" onclick="toggleDarkMode()">
                         <svg id="sun-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
@@ -155,10 +40,10 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="max-w-5xl mx-auto mt-10 px-4 pb-20">
+    <!-- Main -->
+    <main class="max-w-5xl mx-auto mt-10 px-4 pb-20" >
         
-        <!-- About Me -->
+        <!-- About Me Section -->
         <section id="about" class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8 scroll-mt-20">
             <div class="flex flex-col sm:flex-row items-start gap-6">
                 <div class="w-24 h-24 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-full flex items-center justify-center text-white text-3xl font-bold flex-shrink-0">VP</div>
@@ -184,7 +69,7 @@
             </a>
         </section>
 
-        <!-- Skills -->
+        <!-- Skills Section -->
         <section class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
             <h2 class="text-lg font-bold text-gray-900 dark:text-white mb-6">Skills & Technologies</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -355,88 +240,15 @@
         <img id="lightbox-img" src="" alt="Enlarged screenshot" class="max-w-full max-h-full rounded-lg">
     </div>
 
-    <!-- JavaScript -->
-    <script>
-        // Dark Mode Toggle
-        function toggleDarkMode() {
-            const html = document.documentElement;
-            const isDark = html.classList.toggle('dark');
-            localStorage.setItem('darkMode', isDark);
-            updateIcons(isDark);
-        }
-
-        function updateIcons(isDark) {
-            const sunIcon = document.getElementById('sun-icon');
-            const moonIcon = document.getElementById('moon-icon');
-            if (isDark) {
-                sunIcon.classList.remove('hidden');
-                moonIcon.classList.add('hidden');
-            } else {
-                sunIcon.classList.add('hidden');
-                moonIcon.classList.remove('hidden');
-            }
-        }
-
-        // Modal Functions
-        const modal = document.getElementById('contact-modal');
-        const contactBtn = document.getElementById('contact-btn');
-        const closeModal = document.getElementById('close-modal');
-
-        if (contactBtn) {
-            contactBtn.addEventListener('click', () => {
-                modal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            });
-        }
-
-        if (closeModal) {
-            closeModal.addEventListener('click', () => {
-                modal.classList.add('hidden');
-                document.body.style.overflow = '';
-            });
-        }
-
-        if (modal) {
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    modal.classList.add('hidden');
-                    document.body.style.overflow = '';
-                }
-            });
-        }
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
-                modal.classList.add('hidden');
-                document.body.style.overflow = '';
-            }
-        });
-
-        // Lightbox Functions (for detail pages)
-        function openLightbox(src) {
-            const lightbox = document.getElementById('lightbox');
-            document.getElementById('lightbox-img').src = src;
-            lightbox.classList.remove('hidden');
-            lightbox.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.add('hidden');
-            lightbox.classList.remove('flex');
-            document.body.style.overflow = '';
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const isDark = document.documentElement.classList.contains('dark');
-            updateIcons(isDark);
-        });
-    </script>
+    <!-- External Scripts -->
+    <script src="js/main.js"></script>
 
     <!-- Footer -->
     <footer class="py-6 text-center text-sm text-gray-400 dark:text-gray-500 border-t border-gray-200 dark:border-gray-700 mt-auto">
-        &copy; 2026 Val's Portfolio • Built with HTML, CSS & Tailwind
+        &copy; 2026 Val's Portfolio • Built with HTML/CSS/JS
     </footer>
+
+    <script src="js/main.js"></script>
 
 </body>
 </html>
