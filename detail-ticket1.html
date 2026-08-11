@@ -14,12 +14,6 @@
         .project-details h3 { font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-top: 1.5rem; margin-bottom: 0.75rem; }
         .dark .project-details h3 { color: #f9fafb; }
         .project-details p { margin-bottom: 1rem; line-height: 1.75; }
-        .project-details table { width: 100%; border-collapse: collapse; margin: 1rem 0; border-radius: 0.5rem; overflow: hidden; border: 1px solid #e5e7eb; }
-        .dark .project-details table { border-color: #374151; }
-        .project-details th { background-color: #f3f4f6; padding: 0.75rem 1rem; text-align: left; font-weight: 600; font-size: 0.875rem; }
-        .dark .project-details th { background-color: #1f2937; }
-        .project-details td { padding: 0.75rem 1rem; border-top: 1px solid #e5e7eb; font-size: 0.875rem; }
-        .dark .project-details td { border-top-color: #374151; }
         .project-details ul { list-style: none; padding: 0; margin: 0 0 1rem 0; }
         .project-details li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; }
         .project-details li:before { content: "•"; position: absolute; left: 0.5rem; color: #60a5fa; }
@@ -31,16 +25,10 @@
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* Make tables scrollable horizontally on mobile */
-        @media (max-width: 640px) {
-            table {
-                display: block;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-            th, td {
-                white-space: nowrap;
-            }
+        /* Prevent horizontal scroll */
+        * {
+            max-width: 100vw;
+            overflow-x: hidden;
         }
     </style>
     <script>
@@ -101,53 +89,62 @@
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-6">
             <h2 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Project Details</h2>
             <div class="project-details text-gray-600 dark:text-gray-400 leading-relaxed">
-                <h3>Overview</h3>
-                <p>After setting up my Wazuh homelab, I customized a <strong>SOC Operations Overview dashboard</strong> from scratch. This demonstrates how powerful Wazuh is as a tool for threat monitoring in a Security Operations Center context.</p>
-
-                <h3>Architecture Components</h3>
-                <table class="table table-bordered">
-                    <thead><tr><th>Component</th><th>Description</th></tr></thead>
-                    <tbody>
-                        <tr><td><strong>Server</strong></td><td>Ubuntu VM hosting the Wazuh platform</td></tr>
-                        <tr><td><strong>Agent</strong></td><td>Windows VM with Wazuh agent for endpoint monitoring</td></tr>
-                        <tr><td><strong>Dashboard</strong></td><td>Visualized security events, SCA, and File Integrity Monitoring</td></tr>
-                    </tbody>
-                </table>
-
-                <h3>Key Features</h3>
-                <table class="table table-bordered">
-                    <thead><tr><th>Feature</th><th>Details</th></tr></thead>
-                    <tbody>
-                        <tr><td><strong>Security Configuration Assessment (SCA)</strong></td><td>CIS Benchmark compliance monitoring, hardening recommendations, posture scoring</td></tr>
-                        <tr><td><strong>File Integrity Monitoring (FIM)</strong></td><td>Registry change detection, customizable scan rules, audit trail</td></tr>
-                        <tr><td><strong>Threat Hunting</strong></td><td>Live event logs, detailed event inspection, application installation tracking</td></tr>
-                        <tr><td><strong>Custom SOC Dashboard</strong></td><td>Color-coded severity alerts, alert counts, top threat source visualizations</td></tr>
-                    </tbody>
-                </table>
-
-                <h3>Learning Outcomes</h3>
-                <table class="table table-bordered">
-                    <thead><tr><th>Area</th><th>Outcome</th></tr></thead>
-                    <tbody>
-                        <tr><td><strong>SIEM Fundamentals</strong></td><td>Centralized log aggregation and correlation</td></tr>
-                        <tr><td><strong>Endpoint Monitoring</strong></td><td>Deploying and managing agents across heterogeneous systems</td></tr>
-                        <tr><td><strong>Compliance Frameworks</strong></td><td>Implementing CIS benchmarks for baseline security</td></tr>
-                        <tr><td><strong>Incident Investigation</strong></td><td>Using threat hunting features for forensic analysis</td></tr>
-                        <tr><td><strong>Troubleshooting</strong></td><td>Diagnosing network and configuration issues in security deployments</td></tr>
-                    </tbody>
-                </table>
-
-                <h3>Challenges</h3>
-                <table class="table table-bordered">
-                    <thead><tr><th>Issue</th><th>Resolution</th></tr></thead>
-                    <tbody>
-                        <tr><td>Agent installation failed</td><td>Uninstalled/reinstalled Windows VM entirely</td></tr>
-                        <tr><td>Connection refused</td><td>Verified IP alignment (<code>ipconfig</code> on Windows / <code>ifconfig</code> on Ubuntu)</td></tr>
-                        <tr><td>Agent not registering</td><td>Reset IP with <code>ipconfig /renew</code>, removed stale agent from dashboard, re-ran deployment script</td></tr>
-                    </tbody>
-                </table>
-                <h3>References</h3>
-                <p><a href="https://documentation.wazuh.com/current/installation-guide/wazuh-dashboard/installation-assistant.html" target="_blank" rel="noopener">Wazuh Server Installation on Linux</a> | <a href="https://winstall.app/" target="_blank" rel="noopener">Winstall</a></p>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Overview</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            After setting up my Wazuh homelab, I customized a <strong>SOC Operations Overview dashboard</strong> from scratch. This demonstrates how powerful Wazuh is as a tool for threat monitoring in a Security Operations Center context.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Architecture Components</h3>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Server:</strong> Ubuntu VM hosting the Wazuh platform</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Agent:</strong> Windows VM with Wazuh agent for endpoint monitoring</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Dashboard:</strong> Visualized security events, SCA, and File Integrity Monitoring</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Key Features</h3>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Security Configuration Assessment (SCA):</strong> CIS Benchmark compliance monitoring, hardening recommendations, posture scoring</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">File Integrity Monitoring (FIM):</strong> Registry change detection, customizable scan rules, audit trail</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Threat Hunting:</strong> Live event logs, detailed event inspection, application installation tracking</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Custom SOC Dashboard:</strong> Color-coded severity alerts, alert counts, top threat source visualizations</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Learning Outcomes</h3>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">SIEM Fundamentals:</strong> Centralized log aggregation and correlation</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Endpoint Monitoring:</strong> Deploying and managing agents across heterogeneous systems</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Compliance Frameworks:</strong> Implementing CIS benchmarks for baseline security</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Incident Investigation:</strong> Using threat hunting features for forensic analysis</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Troubleshooting:</strong> Diagnosing network and configuration issues in security deployments</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Challenges</h3>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Agent installation failed:</strong> Uninstalled/reinstalled Windows VM entirely</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Connection refused:</strong> Verified IP alignment (<code>ipconfig</code> on Windows / <code>ifconfig</code> on Ubuntu)</li>
+                            <li><strong class="font-semibold text-gray-900 dark:text-white">Agent not registering:</strong> Reset IP with <code>ipconfig /renew</code>, removed stale agent from dashboard, re-ran deployment script</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">References</h3>
+                        <div class="flex flex-wrap gap-3 text-sm">
+                            <a href="https://documentation.wazuh.com/current/installation-guide/wazuh-dashboard/installation-assistant.html" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 hover:underline">Wazuh Server Installation on Linux</a>
+                            <span class="text-gray-400">|</span>
+                            <a href="https://winstall.app/" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 hover:underline">Winstall</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -158,7 +155,7 @@
                 <div>
                     <img src="static/screenshots/mitrewazuh.png" 
                     alt="SOC Ops Wazuh Dashboard" 
-                    class="rounded-lg border border-gray-200    dark:border-gray-700 shadow-sm w-full cursor-pointer" 
+                    class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm w-full cursor-pointer" 
                     onclick="openLightbox(this.src)">
                     <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
                         SOC Ops Wazuh Dashboard
@@ -167,7 +164,7 @@
                 <div>  
                     <img src="static/screenshots/wzwvm.png" 
                     alt="Winstall installation" 
-                    class="rounded-lg border border-gray-200    dark:border-gray-700 shadow-sm w-full cursor-pointer"  
+                    class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm w-full cursor-pointer"  
                     onclick="openLightbox(this.src)">
                     <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
                         Winstall installation
@@ -176,7 +173,7 @@
                 <div>
                     <img src="static/screenshots/wzwvmvd.png" 
                     alt="Wazuh Windows Agent Vulnerability Detection Dashboard"
-                    class="rounded-lg border border-gray-200  dark:border-gray-700 shadow-sm w-full cursor-pointer"
+                    class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm w-full cursor-pointer"
                     onclick="openLightbox(this.src)">
                     <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
                         Wazuh Windows Agent Vulnerability Detection Dashboard
@@ -184,16 +181,16 @@
                 </div>
                 <div>
                     <img src="static/screenshots/wzwvmdb.png" 
-                    alt="Wazuh Windows Agent VM SIEM Dashboard" class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm w-full    cursor-pointer"
+                    alt="Wazuh Windows Agent VM SIEM Dashboard" class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm w-full cursor-pointer"
                     onclick="openLightbox(this.src)">
                     <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                        Wazuh Windows Agent VM SIEM Dashboar
+                        Wazuh Windows Agent VM SIEM Dashboard
                     </p>
                 </div>
                 <div>
                     <img src="static/screenshots/wzwvmsca.png" 
                     alt="Security Configuration Assessment (SCA)" 
-                    class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm w-full     cursor-pointer"
+                    class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm w-full cursor-pointer"
                     onclick="openLightbox(this.src)">
                     <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
                         Security Configuration Assessment (SCA)
@@ -202,7 +199,7 @@
                 <div>
                     <img src="static/screenshots/wzwvmtd.png"
                     alt="Wazuh Threat Hunt Stats"
-                    class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm w-full  cursor-pointer"
+                    class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm w-full cursor-pointer"
                     onclick="openLightbox(this.src)">
                     <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
                         Wazuh Threat Hunt Stats
@@ -211,7 +208,7 @@
                 <div>
                     <img src="static/screenshots/wzwvmtd1.png" 
                     alt="Winstall Threat Details"
-                    class="rounded-lg border border-gray-200   dark:border-gray-700 shadow-sm w-full cursor-pointer"
+                    class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm w-full cursor-pointer"
                     onclick="openLightbox(this.src)">
                     <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
                         Winstall Threat Details
