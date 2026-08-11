@@ -120,3 +120,22 @@ html { scroll-behavior: smooth; }
         padding-right: 1rem !important;
     }
 }
+
+@media (max-width: 640px), (-webkit-min-device-pixel-ratio: 1) {
+    nav {
+        height: auto !important;
+        min-height: 64px !important;
+        flex-wrap: wrap !important;
+    }
+    
+    nav > div:last-of-type > div:last-of-type {
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+        width: 100% !important;
+    }
+    
+    nav a, nav button {
+        white-space: nowrap !important;
+        min-width: auto !important;
+    }
+}
