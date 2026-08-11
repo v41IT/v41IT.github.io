@@ -8,16 +8,18 @@
     <script>
         tailwind.config = { darkMode: 'class' }
     </script>
-    <style>
+        <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; }
-
-        html {
-        scroll-behavior: smooth;
-        }
-        
+        html { scroll-behavior: smooth; }
         * { transition-property: background-color, border-color, color; transition-duration: 200ms; }
         
+        /* Prevent horizontal scroll on mobile */
+        * {
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+    
         .project-details h3 {
             font-size: 1.125rem;
             font-weight: 600;
@@ -28,12 +30,12 @@
         .dark .project-details h3 {
             color: #f9fafb;
         }
-
+    
         .project-details p {
             margin-bottom: 1rem;
             line-height: 1.75;
         }
-
+    
         .project-details table {
             width: 100%;
             border-collapse: collapse;
@@ -45,7 +47,7 @@
         .dark .project-details table {
             border-color: #374151;
         }
-
+    
         .project-details th {
             background-color: #f3f4f6;
             padding: 0.75rem 1rem;
@@ -56,7 +58,7 @@
         .dark .project-details th {
             background-color: #1f2937;
         }
-
+    
         .project-details td {
             padding: 0.75rem 1rem;
             border-top: 1px solid #e5e7eb;
@@ -65,30 +67,30 @@
         .dark .project-details td {
             border-top-color: #374151;
         }
-
+    
         .project-details ul {
             list-style: none;
             padding: 0;
             margin: 0 0 1rem 0;
         }
-
+    
         .project-details li {
             position: relative;
             padding-left: 1.5rem;
             margin-bottom: 0.5rem;
         }
-
+    
         .project-details li:before {
             content: "•";
             position: absolute;
             left: 0.5rem;
             color: #60a5fa;
         }
-
+    
         .project-details strong {
             font-weight: 600;
         }
-
+    
         .project-details a {
             color: #3b82f6;
             text-decoration: underline;
@@ -96,7 +98,7 @@
         .dark .project-details a {
             color: #60a5fa;
         }
-
+    
         /* Make tables scrollable horizontally on mobile */
         @media (max-width: 640px) {
             table {
@@ -212,16 +214,16 @@
                 <div>
                     <img src="static/screenshots/ssh-db.png" 
                     alt="Failed logins over time" 
-                    class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-smw-fullcursor-pointer"
+                    class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-smw-full cursor-pointer"
                     onclick="openLightbox(this.src)">
-                    <p class="text-xs text-gray-500dark:text-gray-400 mt-1">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
                     Failed logins over time
                     </p>
                 </div>
                 <div>
                     <img src="static/screenshots/ssh-db1.png" 
                     alt="Top source IPs" 
-                    class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-smw-fullcursor-pointer"
+                    class="rounded-lg border border-gray-200 dark:border-gray-700 shadow-smw-full cursor-pointer"
                     onclick="openLightbox(this.src)">
                     <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
                         Top source IPs
