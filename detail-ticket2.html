@@ -37,17 +37,19 @@
             overflow-x: hidden;
         }
         
-        /* Make tables scrollable horizontally on mobile */
+        /* Nav mobile */
         @media (max-width: 640px) {
-            table {
-                display: block;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-            th, td {
-                white-space: nowrap;
-            }
+        nav > div:last-of-type > div:last-of-type {
+            flex-wrap: wrap !important;
+            gap: 0.25rem !important;
         }
+        
+        nav a[href="#about"],
+        nav a[href="#projects"] {
+            padding-left: 0.5rem !important;
+            padding-right: 0.5rem !important;
+        }
+    }
     </style>
     <script>
         if (localStorage.getItem('darkMode') === 'true' || (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
