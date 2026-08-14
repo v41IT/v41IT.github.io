@@ -13,53 +13,33 @@
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen flex flex-col">
 
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <div class="logo">VP</div>
-                <span>Val Panganiban<span class="version">v4.1</span></span>
+    <nav class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 shadow-sm sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center h-16 min-h-[64px] py-2">
+                <div class="flex items-center gap-2">
+                    <div class="w-9 h-9 bg-blue-600 rounded-md flex items-center justify-center text-white font-bold text-sm">VP</div>
+                    <span class="font-bold text-lg tracking-tight text-gray-900 dark:text-white">Val Panganiban<span class="text-xs font-normal text-gray-400 dark:text-gray-500 ml-1">v4.1</span></span>
+                </div>
+                
+                <div class="flex items-center gap-1">
+                    <a href="index.html#about" class="px-4 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700">About</a>
+                    <a href="index.html#projects" class="px-4 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700">Projects</a>
+                    
+                    <button id="dark-mode-toggle" class="ml-1 p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" onclick="toggleDarkMode()">
+                        <svg id="sun-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        <svg id="moon-icon" class="w-5 h-5" fill="currentColor" stroke="none" viewBox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    </button>
+                    
+                    <div class="h-6 w-px bg-gray-200 dark:bg-gray-600 mx-2"></div>
+
+                    <button id="contact-btn" class="px-4 py-2 rounded-md text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 transition-colors">
+                        Contact
+                    </button>
+                </div>
             </div>
-            
-            <!-- Desktop Navigation -->
-            <div class="nav-links" id="navLinks">
-                <a href="index.html#about" class="nav-link">About</a>
-                <a href="index.html#projects" class="nav-link">Projects</a>
-                
-                <button id="dark-mode-toggle" class="nav-btn" onclick="toggleDarkMode()">
-                    <svg id="sun-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                    <svg id="moon-icon" class="w-5 h-5" fill="currentColor" stroke="none" viewBox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-                </button>
-                
-                <div class="divider"></div>
-                
-                <button id="contact-btn" class="nav-btn contact-btn">
-                    Contact
-                </button>
-            </div>
-    
-            <!-- Hamburger Menu Icon -->
-            <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
         </div>
     </nav>
-    
-    <!-- Mobile Navigation Menu -->
-    <div class="mobile-nav-menu" id="mobileNavMenu">
-        <div class="mobile-nav-links">
-            <a href="index.html#about" class="mobile-nav-link">About</a>
-            <a href="index.html#projects" class="mobile-nav-link">Projects</a>
-            <button class="mobile-nav-btn mobile-dark-toggle" onclick="toggleDarkMode()">
-                Toggle Dark Mode
-            </button>
-            <button id="mobile-contact-btn" class="mobile-nav-btn mobile-contact-btn">
-                Contact
-            </button>
-        </div>
-    </div>
-    
+
     <!-- Main -->
     <main class="max-w-5xl mx-auto mt-10 px-4 pb-20" >
         
