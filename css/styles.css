@@ -445,10 +445,7 @@ body {
     .hamburger-btn {
         display: flex;
     }
-    
-    .mobile-nav-menu {
-        display: block;
-    }
+
 }
 
 @media (min-width: 769px) {
