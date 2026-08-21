@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -10,6 +11,7 @@
     </script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen flex flex-col">
 
     <!-- Navigation -->
@@ -17,22 +19,38 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center h-16 min-h-[64px] py-2">
                 <div class="flex items-center gap-2">
-                    <div class="w-9 h-9 bg-blue-600 rounded-md flex items-center justify-center text-white font-bold text-sm">VP</div>
-                    <span class="font-bold text-lg tracking-tight text-gray-900 dark:text-white">Val Panganiban<span class="text-xs font-normal text-gray-400 dark:text-gray-500 ml-1">v4.1</span></span>
+                    <div
+                        class="w-9 h-9 bg-blue-600 rounded-md flex items-center justify-center text-white font-bold text-sm">
+                        VP</div>
+                    <span class="font-bold text-lg tracking-tight text-gray-900 dark:text-white">Val Panganiban<span
+                            class="text-xs font-normal text-gray-400 dark:text-gray-500 ml-1">v4.1</span></span>
                 </div>
-                
+
                 <div class="flex items-center gap-1">
-                    <a href="index.html#about" class="px-4 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700">About</a>
-                    <a href="index.html#projects" class="px-4 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700">Projects</a>
-                    
-                    <button id="dark-mode-toggle" class="ml-1 p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" onclick="toggleDarkMode()">
-                        <svg id="sun-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                        <svg id="moon-icon" class="w-5 h-5" fill="currentColor" stroke="none" viewBox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    <a href="index.html#about"
+                        class="px-4 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700">About</a>
+                    <a href="index.html#projects"
+                        class="px-4 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700">Projects</a>
+
+                    <button id="dark-mode-toggle"
+                        class="ml-1 p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                        onclick="toggleDarkMode()">
+                        <svg id="sun-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
+                        </svg>
+                        <svg id="moon-icon" class="w-5 h-5" fill="currentColor" stroke="none" viewBox="0 0 24 24">
+                            <path
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                            </path>
+                        </svg>
                     </button>
-                    
+
                     <div class="h-6 w-px bg-gray-200 dark:bg-gray-600 mx-2"></div>
 
-                    <button id="contact-btn" class="px-4 py-2 rounded-md text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 transition-colors">
+                    <button id="contact-btn"
+                        class="px-4 py-2 rounded-md text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 transition-colors">
                         Contact
                     </button>
                 </div>
@@ -41,63 +59,94 @@
     </nav>
 
     <!-- Main -->
-    <main class="max-w-5xl mx-auto mt-10 px-4 pb-20" >
-        
+    <main class="max-w-5xl mx-auto mt-10 px-4 pb-20">
+
         <!-- About Me Section -->
-        <section id="about" class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8 scroll-mt-20">
+        <section id="about"
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8 scroll-mt-20">
             <div class="flex flex-col sm:flex-row items-start gap-6">
-                <div class="w-24 h-24 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-full flex items-center justify-center text-white text-3xl font-bold flex-shrink-0">VP</div>
+                <div
+                    class="w-24 h-24 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-full flex items-center justify-center text-white text-3xl font-bold flex-shrink-0">
+                    VP</div>
                 <div class="flex-1">
                     <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Hi, I'm Val.</h2>
                     <p class="text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">
-                        IT Professional with hands-on experience in systems administration, cybersecurity, and infrastructure engineering. I manage Linux servers, deploy endpoint security monitoring, hunt vulnerabilities before exploitation, and automate threat remediation. Beyond security, I troubleshoot complex system issues, repair and upgrade hardware, and ensure reliable IT operations.
+                        IT Professional with hands-on experience in systems administration, cybersecurity, and
+                        infrastructure engineering. I manage Linux servers, deploy endpoint security monitoring, hunt
+                        vulnerabilities before exploitation, and automate threat remediation. Beyond security, I
+                        troubleshoot complex system issues, repair and upgrade hardware, and ensure reliable IT
+                        operations.
                     </p>
                 </div>
             </div>
 
-            <a href="https://www.credly.com/earner/earned/badge/7f39f2d0-fbe1-4f68-a781-ea6d1f2a0d02" target="_blank" rel="noopener noreferrer" 
-               class="mt-5 inline-flex items-center gap-3 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg px-5 py-3 border border-blue-100 dark:border-blue-800">
+            <a href="https://www.credly.com/earner/earned/badge/7f39f2d0-fbe1-4f68-a781-ea6d1f2a0d02" target="_blank"
+                rel="noopener noreferrer"
+                class="mt-5 inline-flex items-center gap-3 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg px-5 py-3 border border-blue-100 dark:border-blue-800">
                 <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                        </path>
                     </svg>
                 </div>
                 <div>
-                    <div class="text-sm font-bold text-gray-900 dark:text-white">Google Cybersecurity Professional Certificate v2</div>
+                    <div class="text-sm font-bold text-gray-900 dark:text-white">Google Cybersecurity Professional
+                        Certificate v2</div>
                     <div class="text-xs text-gray-500 dark:text-gray-400">Issued by Google · Coursera</div>
                 </div>
             </a>
         </section>
 
         <!-- Skills Section -->
-        <section class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+        <section
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
             <h2 class="text-lg font-bold text-gray-900 dark:text-white mb-6">Skills & Technologies</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div>
-                    <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">Security</h3>
+                    <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+                        Security</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 rounded-full text-sm font-medium">Network Security</span>
-                        <span class="px-3 py-1 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 rounded-full text-sm font-medium">Vulnerability Assessment</span>
-                        <span class="px-3 py-1 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 rounded-full text-sm font-medium">Incident Response</span>
+                        <span
+                            class="px-3 py-1 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 rounded-full text-sm font-medium">Network
+                            Security</span>
+                        <span
+                            class="px-3 py-1 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 rounded-full text-sm font-medium">Vulnerability
+                            Assessment</span>
+                        <span
+                            class="px-3 py-1 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 rounded-full text-sm font-medium">Incident
+                            Response</span>
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">Tools</h3>
+                    <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+                        Tools</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">Docker</span>
-                        <span class="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">Nmap</span>
-                        <span class="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">Microsoft Cloud Security & Endpoint Management</span>
-                        <span class="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">Proxmox</span>                        
-                        <span class="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">Splunk</span>
-                        <span class="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">Wireshark</span>
+                        <span
+                            class="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">Docker</span>
+                        <span
+                            class="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">Nmap</span>
+                        <span
+                            class="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">Microsoft
+                            Cloud Security & Endpoint Management</span>
+                        <span
+                            class="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">Proxmox</span>
+                        <span
+                            class="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">Splunk</span>
+                        <span
+                            class="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">Wireshark</span>
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">Programming</h3>
+                    <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+                        Programming</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">Python</span>
-                        <span class="px-3 py-1 bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">Bash</span>
-                        <span class="px-3 py-1 bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">PowerShell</span>
+                        <span
+                            class="px-3 py-1 bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">Python</span>
+                        <span
+                            class="px-3 py-1 bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">Bash</span>
+                        <span
+                            class="px-3 py-1 bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">PowerShell</span>
                     </div>
                 </div>
             </div>
@@ -109,75 +158,120 @@
                 <h2 class="text-xl font-bold text-gray-900 dark:text-white">Featured Projects</h2>
                 <p class="text-gray-500 dark:text-gray-400 mt-1">Select tickets to view full details.</p>
             </div>
-            
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+
+            <div
+                class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
                 <div class="table-wrapper">
-                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                    <thead class="bg-gray-50 dark:bg-gray-750">
-                        <tr>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Project ID</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Subject</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Status</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Priority</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Date</th>
-                            <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
-                        
-                        <!-- Project 1: TICKET-1000 -->
-                        <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150">
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-blue-600 dark:text-blue-400">TICKET-1000</td>
-                            <td class="px-6 py-4">
-                                <div class="text-sm font-semibold text-gray-900 dark:text-white">SSH Log Monitoring Dashboard (Splunk)</div>
-                                <div class="text-sm text-gray-500 dark:text-gray-400 mt-1">I built a Splunk dashboard to monitor SSH authentication logs in near real-time, visualizing login attempts...</div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">Completed</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap"><span class="text-xs font-medium text-yellow-600 dark:text-yellow-400">Medium</span></td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Jul 2026</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                <a href="detail-ticket0.html" class="text-blue-600 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 font-semibold">View Details →</a>
-                            </td>
-                        </tr>
+                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                        <thead class="bg-gray-50 dark:bg-gray-750">
+                            <tr>
+                                <th
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                                    Project ID</th>
+                                <th
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                                    Subject</th>
+                                <th
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                                    Status</th>
+                                <th
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                                    Priority</th>
+                                <th
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                                    Date</th>
+                                <th
+                                    class="px-6 py-3 text-right text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                                    Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
 
-                        <!-- Project 2: TICKET-1001 -->
-                        <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150">
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-blue-600 dark:text-blue-400">TICKET-1001</td>
-                            <td class="px-6 py-4">
-                                <div class="text-sm font-semibold text-gray-900 dark:text-white">Wazuh SIEM Homelab: Endpoint Monitoring, FIM, and MITRE ATT&CK dashboard</div>
-                                <div class="text-sm text-gray-500 dark:text-gray-400 mt-1">Deployed a Wazuh SIEM infrastructure in a virtualized homelab environment. Configured Ubuntu server...</div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">Completed</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap"><span class="text-xs font-medium text-orange-600 dark:text-orange-400">High</span></td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Aug 2026</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                <a href="detail-ticket1.html" class="text-blue-600 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 font-semibold">View Details →</a>
-                            </td>
-                        </tr>
+                            <!-- Project 1: TICKET-1000 -->
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150">
+                                <td
+                                    class="px-6 py-4 whitespace-nowrap text-sm font-mono text-blue-600 dark:text-blue-400">
+                                    TICKET-1000</td>
+                                <td class="px-6 py-4">
+                                    <div class="text-sm font-semibold text-gray-900 dark:text-white">SSH Log Monitoring
+                                        Dashboard (Splunk)</div>
+                                    <div class="text-sm text-gray-500 dark:text-gray-400 mt-1">I built a Splunk
+                                        dashboard to monitor SSH authentication logs in near real-time, visualizing
+                                        login attempts...</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span
+                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">Completed</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap"><span
+                                        class="text-xs font-medium text-yellow-600 dark:text-yellow-400">Medium</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Jul
+                                    2026</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <a href="detail-ticket0.html"
+                                        class="text-blue-600 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 font-semibold">View
+                                        Details →</a>
+                                </td>
+                            </tr>
 
-                        <!-- Project 3: TICKET-1002 -->
-                        <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150">
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-blue-600 dark:text-blue-400">TICKET-1002</td>
-                            <td class="px-6 py-4">
-                                <div class="text-sm font-semibold text-gray-900 dark:text-white">Wazuh + VirusTotal: Malware Detection and Elimination Automation</div>
-                                <div class="text-sm text-gray-500 dark:text-gray-400 mt-1">Integrated Wazuh SIEM with VirusTotal API to automate malware detection, threat intelligence lookup...</div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">Completed</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap"><span class="text-xs font-medium text-red-600 dark:text-red-400">Critical</span></td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Aug 2026</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                <a href="detail-ticket2.html" class="text-blue-600 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 font-semibold">View Details →</a>
-                            </td>
-                        </tr>
+                            <!-- Project 2: TICKET-1001 -->
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150">
+                                <td
+                                    class="px-6 py-4 whitespace-nowrap text-sm font-mono text-blue-600 dark:text-blue-400">
+                                    TICKET-1001</td>
+                                <td class="px-6 py-4">
+                                    <div class="text-sm font-semibold text-gray-900 dark:text-white">Wazuh SIEM Homelab:
+                                        Endpoint Monitoring, FIM, and MITRE ATT&CK dashboard</div>
+                                    <div class="text-sm text-gray-500 dark:text-gray-400 mt-1">Deployed a Wazuh SIEM
+                                        infrastructure in a virtualized homelab environment. Configured Ubuntu server...
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span
+                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">Completed</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap"><span
+                                        class="text-xs font-medium text-orange-600 dark:text-orange-400">High</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Aug
+                                    2026</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <a href="detail-ticket1.html"
+                                        class="text-blue-600 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 font-semibold">View
+                                        Details →</a>
+                                </td>
+                            </tr>
 
-                    </tbody>
-                </table>
+                            <!-- Project 3: TICKET-1002 -->
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150">
+                                <td
+                                    class="px-6 py-4 whitespace-nowrap text-sm font-mono text-blue-600 dark:text-blue-400">
+                                    TICKET-1002</td>
+                                <td class="px-6 py-4">
+                                    <div class="text-sm font-semibold text-gray-900 dark:text-white">Wazuh + VirusTotal:
+                                        Malware Detection and Elimination Automation</div>
+                                    <div class="text-sm text-gray-500 dark:text-gray-400 mt-1">Integrated Wazuh SIEM
+                                        with VirusTotal API to automate malware detection, threat intelligence lookup...
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span
+                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">Completed</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap"><span
+                                        class="text-xs font-medium text-red-600 dark:text-red-400">Critical</span></td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Aug
+                                    2026</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <a href="detail-ticket2.html"
+                                        class="text-blue-600 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 font-semibold">View
+                                        Details →</a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
@@ -185,12 +279,17 @@
     </main>
 
     <!-- Contact Modal -->
-    <div id="contact-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center modal-overlay">
+    <div id="contact-modal"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center modal-overlay">
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-md w-full mx-4 p-8 modal-content relative">
-            
+
             <!-- Close Button -->
-            <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            <button id="close-modal"
+                class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
             </button>
 
             <!-- Modal Header -->
@@ -203,17 +302,26 @@
             <div class="space-y-4">
                 <div class="flex items-center gap-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg transition-colors">
                     <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
                     </div>
                     <div>
                         <div class="text-sm text-gray-500 dark:text-gray-400">Email</div>
-                        <div class="font-semibold text-gray-900 dark:text-white">Available on resume or upon request</div>
+                        <div class="font-semibold text-gray-900 dark:text-white">Available on resume or upon request
+                        </div>
                     </div>
                 </div>
 
-                <a href="https://linkedin.com/in/valp3" target="_blank" class="flex items-center gap-4 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg hover:bg-green-100 dark:hover:bg-green-900/30 transition-colors">
+                <a href="https://linkedin.com/in/valp3" target="_blank"
+                    class="flex items-center gap-4 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg hover:bg-green-100 dark:hover:bg-green-900/30 transition-colors">
                     <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
                     </div>
                     <div>
                         <div class="text-sm text-gray-500 dark:text-gray-400">LinkedIn</div>
@@ -221,9 +329,13 @@
                     </div>
                 </a>
 
-                <a href="https://github.com/v41IT" target="_blank" class="flex items-center gap-4 p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg hover:bg-orange-100 dark:hover:bg-orange-900/30 transition-colors">
+                <a href="https://github.com/v41IT" target="_blank"
+                    class="flex items-center gap-4 p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg hover:bg-orange-100 dark:hover:bg-orange-900/30 transition-colors">
                     <div class="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center text-white">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
                     </div>
                     <div>
                         <div class="text-sm text-gray-500 dark:text-gray-400">GitHub</div>
@@ -233,12 +345,14 @@
             </div>
 
             <!-- Footer Note -->
-            <p class="text-xs text-gray-400 dark:text-gray-500 mt-6 text-center">Response time: Usually within 24 hours</p>
+            <p class="text-xs text-gray-400 dark:text-gray-500 mt-6 text-center">Response time: Usually within 24 hours
+            </p>
         </div>
     </div>
 
     <!-- Lightbox for image zoom (used on detail pages) -->
-    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 z-[60] hidden items-center justify-center p-4" onclick="closeLightbox()">
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 z-[60] hidden items-center justify-center p-4"
+        onclick="closeLightbox()">
         <img id="lightbox-img" src="" alt="Enlarged screenshot" class="max-w-full max-h-full rounded-lg">
     </div>
 
@@ -246,11 +360,13 @@
     <script src="js/main.js"></script>
 
     <!-- Footer -->
-    <footer class="py-6 text-center text-sm text-gray-400 dark:text-gray-500 border-t border-gray-200 dark:border-gray-700 mt-auto">
+    <footer
+        class="py-6 text-center text-sm text-gray-400 dark:text-gray-500 border-t border-gray-200 dark:border-gray-700 mt-auto">
         &copy; 2026 Val's Portfolio • Built with HTML/CSS/JS
     </footer>
 
     <script src="js/main.js"></script>
 
 </body>
+
 </html>

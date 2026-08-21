@@ -78,7 +78,7 @@ function closeLightbox() {
 }
 
 // Initialize Icons
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const isDark = document.documentElement.classList.contains('dark');
     updateIcons(isDark);
 });
